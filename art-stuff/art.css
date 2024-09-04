@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f3f6f8;
+    line-height: 1.6;
+}
+
+/* Container for Layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Left Column Styles */
+.left-column {
+    flex: 0.3;
+    padding-right: 1rem;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+
+.headshot {
+    width: 150px;
+    height: 210px;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+h2 {
+    color: #555;
+    font-weight: normal;
+}
+
+#contact {
+    margin-top: 2rem;
+}
+
+#contact p {
+    margin: 0.5rem 0;
+}
+
+/* Right Column Styles */
+.right-column {
+    flex: 0.7;
+    padding-left: 2rem;
+}
+
+.right-column section {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: #222;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f3f6f8;
+    /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); */
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+td {
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Photographer Credit Styles */
+.photographer-credit {
+    font-size: 0.7rem; /* Smaller font size */
+    color: #aaa; /* Lighter grey color */
+    margin-top: 0.3rem; /* Slight space between photo and credit */
+}
