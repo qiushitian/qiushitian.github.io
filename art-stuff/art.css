@@ -14,13 +14,13 @@ body {
     flex-direction: row;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* Left Column Styles */
 .left-column {
     flex: 0.3;
-    padding-right: 1rem;
+    padding-right: 2rem;
     border-right: 1px solid #ddd;
     text-align: center;
 }
@@ -30,7 +30,7 @@ body {
     height: 210px;
     border-radius: 5%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 h1 {
@@ -44,8 +44,13 @@ h2 {
     font-weight: normal;
 }
 
+.pronouns {
+    color: #7e7d7d;
+}
+
 #contact {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    margin-top: 0rem;
 }
 
 #contact p {
@@ -107,8 +112,10 @@ th, td {
 }
 
 th {
-    background-color: #f9f9f9;
-    font-weight: bold;
+    background-color: #f2f4f6;
+    /* font-weight: bold; */
+    color: #747474;
+    font-size: 0.9rem;
 }
 
 td {
@@ -124,4 +131,49 @@ tr:last-child td {
     font-size: 0.7rem; /* Smaller font size */
     color: #aaa; /* Lighter grey color */
     margin-top: 0.3rem; /* Slight space between photo and credit */
+}
+
+/* Media Query for mobile/vertical screen */
+@media (max-width: 768px) { /* Adjust 768px as needed for different screen sizes */
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+        padding: 1rem;
+    }
+
+    .left-column {
+        border-right: none; /* Remove border when stacked */
+        border-bottom: 1px solid #ddd; /* Add bottom border for separation */
+        padding-right: 0; /* Remove right padding */
+        padding-bottom: 1rem; /* Add space below the left column */
+    }
+
+    .right-column {
+        padding-left: 0; /* Remove left padding for better alignment */
+        padding-top: 1rem; /* Add space at the top for visual separation */
+    }
+}
+
+/* Gallery Section Styles */
+#gallery {
+    margin-top: 2rem; /* Space above the gallery */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* Space between images */
+}
+
+.gallery-grid img {
+    width: 100%; /* Full width of the grid cell */
+    border-radius: 4px; /* Optional: rounded corners for images */
+    object-fit: cover; /* Ensures images cover the area nicely */
+}
+
+/* Featured Image Styles */
+.featured-image {
+    width: 60%; /* Automatically resize to the right column's width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 2rem; /* Optional: Add space above the image */
+    border-radius: 4px; /* Optional: Rounded corners for the image */
 }
