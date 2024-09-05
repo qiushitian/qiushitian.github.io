@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -15,14 +15,37 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 /* Left Column Styles */
 .left-column {
-    flex: 0.3;
+    /* flex: 0.3; */
     padding-right: 2rem;
     border-right: 1px solid #ddd;
+    /* background-color: #eaeef0; */
     text-align: center;
+
+    /* Adjust this value as necessary */
+    /* width: 25%;  */
+    /* padding: 1rem; */
+    /* background-color: #f8f9fa; Light background */
+    /* Optional: a subtle shadow */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
+}
+
+/* Sticky left column on larger screens */
+@media screen and (min-width: 768px) { /* Only applies on screens wider than 768px */
+    .left-column {
+        position: -webkit-sticky; /* For Safari support */
+        position: sticky;
+        top: 100px; /* Sticks to the top of the viewport */
+        /* Makes the left column occupy the full height of the viewport */
+        height: 100vh; 
+        /* Ensures content inside the left column can be scrolled if necessary */
+        overflow: auto; 
+    }
 }
 
 .headshot {
@@ -30,13 +53,19 @@ body {
     height: 210px;
     border-radius: 5%;
     object-fit: cover;
+    margin-top: 2rem;
     /* margin-bottom: 1rem; */
+}
+
+p {
+    font-family: Georgia, serif;
 }
 
 h1 {
     margin-top: 1rem;
     font-size: 2rem;
     color: #222;
+    font-family: Heletica, sans-serif;
 }
 
 h2 {
@@ -55,12 +84,18 @@ h2 {
 
 #contact p {
     margin: 0.5rem 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Right Column Styles */
 .right-column {
-    flex: 0.7;
+    flex: 1;
     padding-left: 2rem;
+
+    /* Adjusted to allow space for the left column */
+    width: 100%;
+    /* padding: 1rem; */
+    /* margin-left: auto; */
 }
 
 .right-column section {
@@ -103,6 +138,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
+    font-family: Georgia, serif;
 }
 
 th, td {
@@ -131,6 +167,7 @@ tr:last-child td {
     font-size: 0.7rem; /* Smaller font size */
     color: #aaa; /* Lighter grey color */
     margin-top: 0.3rem; /* Slight space between photo and credit */
+    text-align: center;
 }
 
 /* Media Query for mobile/vertical screen */
@@ -153,6 +190,16 @@ tr:last-child td {
     }
 }
 
+/* Responsive layout: stack columns on smaller screens */
+@media screen and (max-width: 768px) {
+    .left-column,
+    .right-column {
+        width: 100%; /* Full width for both columns */
+        position: static; /* Normal flow for mobile */
+        height: auto; /* Allow dynamic height */
+    }
+}
+
 /* Gallery Section Styles */
 #gallery {
     margin-top: 2rem; /* Space above the gallery */
@@ -172,8 +219,58 @@ tr:last-child td {
 
 /* Featured Image Styles */
 .featured-image {
-    width: 60%; /* Automatically resize to the right column's width */
+    /* max-width: 800px; */
+    width: 100%; /* Automatically resize to the right column's width */
     height: auto; /* Maintain aspect ratio */
     margin-top: 2rem; /* Optional: Add space above the image */
     border-radius: 4px; /* Optional: Rounded corners for the image */
+    /* align-self: center; */
+}
+
+img {
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Button Styles */
+#moreBtn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#moreBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Clickable text (show more) styling */
+.show-more {
+    color: #0051a9; /* Make it look like a link */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: underline;
+}
+
+.show-more:hover {
+    color: #00448c; /* Darker color on hover */
+}
+
+/* Subtle link styling */
+.slink {
+    color: #001d39; /* Deep near-black blue */
+    text-decoration: underline; /* Underline */
+    text-decoration-thickness: 0.05px; /* Thin underline */
+    text-underline-offset: 3px; /* Slight offset for subtle effect */
+    /* font-weight: 400;  */
+    /* Normal weight for a more subdued look */
+}
+
+.slink:hover {
+    color: #024483; /* Slightly darker on hover */
+    text-decoration-thickness: 1px; /* Increase underline thickness on hover */
 }

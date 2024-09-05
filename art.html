@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qiushi Chris Tian</title>
     <link rel="stylesheet" href="art-stuff/art.css">
+    <script>
+        function toggleContent() {
+            var content = document.getElementById('hiddenContent');
+            var link = document.getElementById('moreLink');
+            
+            // Toggle display of content
+            if (content.style.display === 'none') {
+                content.style.display = 'block'; // Show the content
+                link.textContent = 'Show less'; // Change text to 'Show less'
+            } else {
+                content.style.display = 'none'; // Hide the content
+                link.textContent = 'Show more & photos'; // Change text back to 'Show more'
+            }
+        }
+
+        function toggleContent2() {
+            var content = document.getElementById('sienaContent');
+            var link = document.getElementById('sienaLink');
+            
+            // Toggle display of content
+            if (content.style.display === 'none') {
+                content.style.display = 'block'; // Show the content
+                link.textContent = 'Hide'; // Change text to 'Show less'
+            } else {
+                content.style.display = 'none'; // Hide the content
+                link.textContent = 'What’s here?'; // Change text back to 'Show more'
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -43,7 +72,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><i>Small Mouth Sounds</i></td>
+                            <td> <i>Small Mouth Sounds</i> </td>
                             <td>Jan</td>
                             <td>Nina Jakobson</td>
                             <td>2024</td>
@@ -52,16 +81,22 @@
                 </table>
 
                 <p>
-                    In this breviloquent yet powerful piece by Bess Wohl, Jan is the first charater to enter and the last to leave. With few words at my disposal, I turned my conscientiously devised body movements and non-verbal sounds into layered voices, guiding the audience through my character’s couragous quest for human connections and self discovery. Portraying Jan’s intertwined confusion, pain, relief, grief, and deeply touching love, I brought on stage his – and my own, as an actor – transformations. 
+                    This powerful piece by Bess Wohl celebrates silence. I turned carefully devised body movements and non-verbal sounds into layered voices, guiding the audience through Jan’s intertwined pain, confusion, grief, love, and relief. At the end of his courageous quest for human connections and self-discovery, I brought on stage my character’s—and my own, as an actor—transformations. <span id="moreLink" onclick="toggleContent()" class="show-more">Show more & photos</span>
                 </p>
-                <!-- <p>
-                    <i>Small Mouth Sounds</i> was shown at Wesleyan University’s Patricelli ’92 Theater from Februray 29 to March 2, 2024. In months prior, I enjoyed rehearsals and collaboration with others cast and crew members and, especially, director Nina Jakobson, who assembled this production as a part of their senior honors thesis in theatre. It was my most magical experience in college.
-                </p> -->
-                <p>
-                    Read about the production on <a href="https://www.wesleyan.edu/cfa/events/2024/02-2024/02292024-small-mouth-sounds.html">Wesleyan's Center for the Arts page</a>, which is also covered by the Wesleyan Argus in an <a href="http://wesleyanargus.com/2024/03/04/small-mouth-sounds-was-freaking-awesome-silence-at-the-end-of-the-world/">article</a> and a <a href="http://wesleyanargus.com/2024/04/04/response-to-small-mouth-sounds-was-freaking-awesome/">response.</a>
-                </p>
-                <img src="art-stuff/Qiushi_Chris_Tian_in_Small_Mouth_Sounds.JPG" alt="Chris in Small Mouth Sounds" class="featured-image">
-                <p class="photographer-credit">Photos by Varia Voloshin</p>
+
+                <section id="extra-content">
+                    <!-- <button id="moreBtn" onclick="toggleContent()">More</button> -->
+                    <div id="hiddenContent" style="display:none;"> <!-- Hidden content container -->
+                        <p>
+                             I performed at Wesleyan University’s Patricelli ’92 Theater from Februray 29 to March 2, 2024. In months prior, I enjoyed rehearsals and collaboration with others cast and crew members and, especially, director Nina Jakobson, who assembled this production as a part of their senior honors thesis in theatre. Being a cast member of the <i>Small Mouth Sounds</i> production was my most magical experience in college.
+                        </p>
+                        <p>
+                            Read about the production in an <a href="http://wesleyanargus.com/2024/03/04/small-mouth-sounds-was-freaking-awesome-silence-at-the-end-of-the-world/">article</a> and a <a href="http://wesleyanargus.com/2024/04/04/response-to-small-mouth-sounds-was-freaking-awesome/">response</a> on the Wesleyan Argus. More information at <a href="https://www.wesleyan.edu/cfa/events/2024/02-2024/02292024-small-mouth-sounds.html">Wesleyan's Center for the Arts page</a>.
+                        </p>
+                        <img src="art-stuff/Qiushi_Chris_Tian_in_Small_Mouth_Sounds.JPG" alt="Chris in Small Mouth Sounds" class="featured-image">
+                        <p class="photographer-credit">Photos by Varia Voloshin</p>
+                    </div>
+                </section>
             </section>
 
             <!-- New Gallery Section -->
@@ -83,7 +118,7 @@
                             <th>Title</th>
                             <th>Role</th>
                             <th>Writer-Director</th>
-                            <th>Year</th>
+                            <th>Release year</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,7 +129,9 @@
                             <td>in post</td>
                         </tr>
                         <tr>
-                            <td> <i>The Planet Janus</i> </td>
+                            <td> <i><a href="https://youtu.be/0jzVMIRgwjw?si=T0dM36elwBXMKfiH" class="slink">
+                                The Planet Janus
+                            </a></i> </td>
                             <td>Student</td>
                             <td>Caroline Lamoureux</td>
                             <td>2024</td>
@@ -102,7 +139,9 @@
                         <tr>
                             <td> <i>No Sleep, No Morning</i> </td>
                             <td>The Doctor</td>
-                            <td>Kieran Gettle-Gilmartin</td>
+                            <td><a href="https://kieran-gettel-gilmartin.webnode.page" class="slink">
+                                Kieran Gettel-Gilmartin
+                                </a></td>
                             <td>2024</td>
                         </tr>
                         <tr>
@@ -118,9 +157,13 @@
                             <td>2023</td>
                         </tr>
                         <tr>
-                            <td> <i>Snap Away</i> </td>
+                            <td> <i><a href="https://m.youtube.com/watch?fbclid=PAZXh0bgNhZW0CMTEAAaaq1cN1ZnAIFOEX1oClltrwH9AUYn_3Ir5lRFLfB9jLhLuHSooz6sOqgbY_aem_-eQI1pP4C8hylxSeRjVr0g&v=H0GGSNz4kWw&feature=youtu.be" class="slink">
+                                Snap Away
+                            </a></i> </td>
                             <td>Audience Member</td>
-                            <td>Cole Goco</td>
+                            <td><a href="https://www.colegoco.art/" class="slink">
+                                Cole Goco
+                            </a></td>
                             <td>2023</td>
                         </tr>
                         <tr>
@@ -141,32 +184,42 @@
                             <th>Title</th>
                             <th>Position</th>
                             <th>Writer-Director</th>
-                            <th>Year</th>
+                            <th>Release year</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td> <i>Stuck</i> </td>
                             <td>Gaffer</td>
-                            <td>Jas Le</td>
+                            <td>Jasmyne Le</td>
                             <td>in post</td>
                         </tr>
                         <tr>
-                            <td> <i>Baby Bits</i> </td>
+                            <td> <i><a href="https://vimeo.com/966727666?share=copy" class="slink">
+                                Baby Bits
+                            </a></i> </td>
                             <td>Grip</td>
-                            <td>Sloane Stone</td>
+                            <td><a href="https://www.a-dzh.com/" class="slink">
+                                Sloane Stone
+                            </a></td>
                             <td>2024</td>
                         </tr>
                         <tr>
-                            <td> <i>The Planet Janus</i> </td>
+                            <td> <i><a href="https://youtu.be/0jzVMIRgwjw?si=T0dM36elwBXMKfiH" class="slink">
+                                The Planet Janus
+                            </a></i> </td>
                             <td>Gaffer, Science Consultant</td>
                             <td>Caroline Lamoureux</td>
                             <td>2024</td>
                         </tr>
                         <tr>
-                            <td> <i>Play Back</i> </td>
+                            <td> <i><a href="https://filmfreeway.com/Playback308/" class="slink">
+                                Playback
+                            </a></i> </td>
                             <td>Special Thanks</td>
-                            <td>Gavin Zahn</td>
+                            <td><a href="https://www.imdb.com/name/nm14182414/?ref_=ext_shr_lnk" class="slink">
+                                Gavin Zahn
+                            </a></td>
                             <td>2024</td>
                         </tr>
                         <tr>
@@ -197,6 +250,27 @@
                         </tr>
                     </tbody>
                 </table>
+            </section>
+
+            <br />
+
+            <p>
+                <small id="sienaLink" onclick="toggleContent2()" class="show-more">
+                    What’s here?
+                </small>
+            </p>
+            
+            <section id="siena">
+                <div id="sienaContent" style="display:none;">
+                    <h3>Siena, Italy</h3>
+                    <p>
+                        I wasted a wonderful summer in the beautiful Tuscan city of Siena pretending to learn Renaissance arts and painting, only to realize that I don’t like it very much. Nonetheless, I tried to capture some colors and shapes inspired by Siena’s <i><a href="https://en.wikipedia.org/wiki/Contrade_of_Siena" class="slink">contrade</a></i> and <i><a href="https://en.wikipedia.org/wiki/Palio_di_Siena" class="slink">Palio</a></i> on <a href="https://www.ilpalio.siena.it/5/Palio/202208160/" class="slink">August 17, 2022,</a> in this work.
+                    </p>
+                    <img src="art-stuff/Qiushi_Chris_Tian_painting_Siena.JPG" alt="Chris’ Siena painting" style="max-width: 300px;">
+                    <p>
+                        Learn more about the contrade, Palio, and Siena on <a href="https://artsandculture.google.com/story/life-inside-the-contrade-consorzio-per-la-tutela-del-palio-di-siena/pAWBaDQr-XV4Kg?hl=en", class="slink">Google Arts & Culture.</a>
+                    </p>
+                </div>
             </section>
         </main>
     </div>
