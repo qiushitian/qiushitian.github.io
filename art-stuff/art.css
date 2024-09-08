@@ -164,7 +164,7 @@ tr:last-child td {
 
 /* Photographer Credit Styles */
 .photographer-credit {
-    font-size: 0.7rem; /* Smaller font size */
+    font-size: 0.6rem; /* Smaller font size */
     color: #aaa; /* Lighter grey color */
     margin-top: 0.3rem; /* Slight space between photo and credit */
     text-align: center;
