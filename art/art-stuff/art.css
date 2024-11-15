@@ -98,6 +98,15 @@ h2 {
     /* margin-left: auto; */
 }
 
+/* Single Column Styles */
+.single-column {
+    /* max-width: 300px; */
+    flex: 0.5;    
+    padding-left: 4rem;
+    /* padding: 1rem; */
+    /* margin-left: auto; */
+}
+
 .right-column section {
     margin-bottom: 2rem;
 }
