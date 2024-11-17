@@ -109,17 +109,10 @@ h2 {
     min-height: 80vh; /* Ensure box has a significant height */
     margin: 2rem auto; /* Center horizontally with margin */
     padding: 2rem; /* Internal padding */
-    background-color: #ffffff; /* Optional: background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    /* background-color: #ffffff; */ /* Optional: background color */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ /* Optional: subtle shadow */
     border-radius: 8px; /* Optional: rounded corners */
     /* text-align: center; Center text alignment */
-
-    /* max-width: 300px; */
-    /* flex: 0.5;     */
-    /* padding-left: 2rem;
-    padding-right: 2rem; */
-    /* padding: 1rem; */
-    /* margin-left: auto; */
 }
 
 .right-column section {
