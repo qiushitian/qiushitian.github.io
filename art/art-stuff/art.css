@@ -12,7 +12,7 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 2000px; /* Was 1200px */
     margin: 0 auto;
     padding: 1rem;
 
@@ -96,6 +96,23 @@ h2 {
     width: 100%;
     /* padding: 1rem; */
     /* margin-left: auto; */
+}
+
+/* Single Column Styles */
+.single-column {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    /* align-items: center; Center horizontally */
+    width: 100%; /* Full width for responsiveness */
+    max-width: 480px; /* Limit width to phone size */
+    min-height: 80vh; /* Ensure box has a significant height */
+    margin: 2rem auto; /* Center horizontally with margin */
+    padding: 2rem; /* Internal padding */
+    /* background-color: #ffffff; */ /* Optional: background color */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */ /* Optional: subtle shadow */
+    border-radius: 8px; /* Optional: rounded corners */
+    /* text-align: center; Center text alignment */
 }
 
 .right-column section {
@@ -203,18 +220,36 @@ tr:last-child td {
 /* Gallery Section Styles */
 #gallery {
     margin-top: 2rem; /* Space above the gallery */
+    width: 100%;
 }
 
 .gallery-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(4, 1fr); /* Responsive grid. Was repeat(auto-fill, minmax(150px, 1fr)) */
     gap: 1rem; /* Space between images */
 }
 
+/* 2 columns */
+@media (max-width: 1000px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 1 column */
+/* @media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+} */
+
 .gallery-grid img {
     width: 100%; /* Full width of the grid cell */
-    border-radius: 4px; /* Optional: rounded corners for images */
+    height: 100%;
+    border-radius: 0; /* Optional: rounded corners for images. Was 4px */
     object-fit: cover; /* Ensures images cover the area nicely */
+    display: block;
 }
 
 /* Featured Image Styles */
